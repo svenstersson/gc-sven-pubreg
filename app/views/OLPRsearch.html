@@ -1,0 +1,158 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="/index" class="govuk-back-link">Back to Our registers</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Operator Public Register</h1>
+        <p class="govuk-body">Enter search terms to find details of an Operator or gambling sector.</p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="OL-name">
+            Operator name
+          </label>
+          <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with operator name
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                You can use this field to search an operator's legally registered name, their trading name, or the names of any websites or premises that they operate.
+              </div>
+            </details>
+          <input class="govuk-input" id="OL-name" name="OL-name" type="text">
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="OL-number">
+              Operator reference number
+            </label>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with operator reference number
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  You can use this field to search an operator's full licence number, or their unique Gambling Commission account number.
+                </div>
+              </details>
+            <input class="govuk-input" id="OL-number" name="OL-number" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="OL-number">
+                Operator website address
+              </label>
+              <input class="govuk-input" id="OL-number" name="OL-number" type="text">
+            </div>
+
+
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="sector-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <p class="govuk-body-l">
+                      Which gambling sectors or activities do you want to search for?
+                   
+                    <span id="sector-hint" class="govuk-hint">
+                        Select all that apply.
+                      </span>
+                  </legend>
+                </p>
+                  
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="betting">
+                      <label class="govuk-label govuk-checkboxes__label" for="sector-1">
+                        Betting
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="sector-2" name="sector" type="checkbox" value="bingo">
+                      <label class="govuk-label govuk-checkboxes__label" for="sector-2">
+                        Bingo
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="casino">
+                      <label class="govuk-label govuk-checkboxes__label" for="sector-3">
+                        Casino
+                      </label> </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="casino">
+                          <label class="govuk-label govuk-checkboxes__label" for="sector-3">
+                            etc......
+                          </label> </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="RA-type-hint">
+                      <label class="govuk-label" for="RA-type">
+                          Regulatory action
+                        </label>
+                        <details class="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Help with regulatory action
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              Selecting yes will return matching results which have had regulatory action taken against them. Selecting no will only return matching results which have not had regulatory action taken against them. For more details on regulatory action, <a href ="/#">click here.</a>
+                            </div>
+                          </details>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="RA-type-1" name="RA-type" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="RA-type-1">
+                          Yes
+                        </label> </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="RA-type-2" name="RA-type" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="RA-type-2">
+                          No
+                        </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+
+
+              <div class="govuk-form-group">
+                  <label class="govuk-label" for="OLstatus">
+                    Licence status
+                  </label>
+                  <select class="govuk-select" id="OLstatus" name="OLstatus">
+                    <option value="OLstatus1" selected>Any</option>
+                    <option value="OLstatus2">Active</option>
+                    <option value="OLstatus3">Lapsed</option>
+                    <option value="OLstatus4">Surrendered</option>
+                    <option value="OLstatus5">Suspended</option>
+                    <option value="OLstatus6">Revoked</option>
+                    <option value="OLstatus7">Etc...</option>
+                  </select>
+                </div>
+
+          <a href="/OLPRhome" role="button" draggable="false" class="govuk-button govuk-button--start">
+              Search
+            </a>
+      </div>
+    
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

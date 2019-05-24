@@ -1,0 +1,170 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/index" class="govuk-back-link">Back to Our registers</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Sanctions Register</h1>
+        <p class="govuk-body">Enter search terms to find details of a regulatory action.</p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="S-name">
+            Licence holder name
+          </label>
+          <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with name
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Enter the full or partial name of a licence holder to search the register for that licensee. In the case of operators, trading names may also be used.
+              </div>
+            </details>
+          <input class="govuk-input" id="S-name" name="S-name" type="text">
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="S-number">
+              Licence holder reference number
+            </label>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with licence holder reference number
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  You can use this field to search for a licence holder by their full licence number or their unique Gambling Commission account number.
+                </div>
+              </details>
+            <input class="govuk-input" id="S-number" name="S-number" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="date-hint" role="group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <p class="govuk-body-l">
+                    Date of action
+                    
+                </legend>
+                <span id="date-hint" class="govuk-hint">
+                  For example, 01 2018
+                </span>
+              </p>
+                <div class="govuk-date-input" id="date-date">
+                  
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-year" name="date-year" type="number" pattern="[0-9]*">
+                    </div>
+                </div>
+              </div>
+              </fieldset>
+            </div>
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <p class="govuk-body-l">
+                      Licence type
+                  </legend>
+                 
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                        Operating Licence
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                        Personal Licence
+                      </label> </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+
+<div class="govuk-checkboxes">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <p class="govuk-body-l">
+        Licensed activity
+        
+    </legend>
+    <span id="date-hint" class="govuk-hint">
+        If you are looking for action taken against an operator, select all licensed activities which apply.
+      </span>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="stype-1" name="stype" type="checkbox" value="betting">
+                      <label class="govuk-label govuk-checkboxes__label" for="stype-1">
+                        Betting
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="stype-2" name="stype" type="checkbox" value="bingo">
+                      <label class="govuk-label govuk-checkboxes__label" for="stype-2">
+                        Bingo
+                      </label> </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="stype-3" name="stype" type="checkbox" value="casino">
+                      <label class="govuk-label govuk-checkboxes__label" for="stype-3">
+                        Casino
+                      </label> </div>
+                      <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="stype-3" name="stype" type="checkbox" value="casino">
+                          <label class="govuk-label govuk-checkboxes__label" for="stype-3">
+                            etc......
+                          </label> </div>
+                  </div>
+
+
+
+
+
+
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="stype">
+                    <p class="govuk-body-l">
+                  Type of action
+                    </p>
+                </label>
+                <select class="govuk-select" id="stype" name="stype">
+                  <option value="stype1" selected>Any</option>
+                  <option value="stype2">Action 1</option>
+                  <option value="stype3">Action 2</option>
+                  <option value="stype4">Action 3</option>
+                </select>
+              </div>
+
+          <a href="/SPRhome" role="button" draggable="false" class="govuk-button govuk-button--start">
+              Search
+            </a>
+      </div>
+    
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

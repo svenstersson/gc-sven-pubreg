@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/index" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Find information about a regulatory action</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Welcome to the Sanctions Register</h2>
+        <p class="govuk-body-l">This service contains details of regulatory action, including sanctions, taken against a licence holder by the Gambling Commission.</p>
+        <p class="govuk-body">Regulatory action may be taken against holders of operating or personal licences. Regulatory actions remain on this register for three years from the date of the action. After this time has expired, the action is removed from the register.</p>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is a regulatory action?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Include a list of the different types of regulatory action and what they mean......
+          </div>
+        </details>
+        <a href="/SPRsearch" role="button" draggable="false" class="govuk-button govuk-button--start">
+          Continue to Sanctions Register
+        </a>
+      </div>
+
+<form method="post">
+
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Other registers</h3>
+        <p class="govuk-body">The Commission also maintains registers for Operating Licence holders, Personal Licence holders, and premises used to deliver gambling or gaming services.</p>
+        <button type="submit" class="govuk-button--secondary">
+          Return to Public Register home
+        </button>
+
+      </form>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

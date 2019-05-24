@@ -1,0 +1,146 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="/index" class="govuk-back-link">Back to Our registers</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Premises Register</h1>
+        <p class="govuk-body">Enter search terms to find details of a licensed premises.</p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="prem-name">
+            Operator name
+          </label>
+          <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with operator name
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Enter the full or partial name of a licensee to search the register for premises operated by that licensee. The operators registered name or any trading names may be used.
+              </div>
+            </details>
+          <input class="govuk-input" id="prem-name" name="prem-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="prem-number">
+              Operator reference number
+            </label>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with operator reference number
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  You can use this field to search for premises operated by a particular licence holder by entering their full licence number or their unique Gambling Commission account number.
+                </div>
+              </details>
+            <input class="govuk-input" id="prem-number" name="prem-number" type="text">
+          </div>
+
+
+            <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <p class="govuk-body-l">
+                      Premises address
+                   
+                    <span id="premsector-hint" class="govuk-hint">
+                        Enter the location of any specific premises you wish to find details of.
+                      </span>
+                  </legend>
+                </p>
+              <label class="govuk-label" for="prem-number">
+                  Street
+              
+            <input class="govuk-input" id="prem-number" name="prem-number" type="text">
+          </label>
+            <label class="govuk-label" for="prem-number">
+                Town/City
+            
+          <input class="govuk-input" id="prem-number" name="prem-number" type="text">
+        </label>
+          <label class="govuk-label" for="prem-number">
+              Postcode
+        <input class="govuk-input" id="prem-number" name="prem-number" type="text">
+      </label>
+          </div>
+         
+
+
+
+
+            
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="premsector-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <p class="govuk-body-l">
+                        Type of premises
+                     
+                      <span id="premsector-hint" class="govuk-hint">
+                          Select all that apply.
+                        </span>
+                    </legend>
+                  </p>
+                    
+                    <div class="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="premsector-1" name="premsector" type="checkbox" value="betting">
+                        <label class="govuk-label govuk-checkboxes__label" for="premsector-1">
+                          Betting
+                        </label> </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="premsector-2" name="premsector" type="checkbox" value="bingo">
+                        <label class="govuk-label govuk-checkboxes__label" for="premsector-2">
+                          Bingo
+                        </label> </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="premsector-3" name="premsector" type="checkbox" value="casino">
+                        <label class="govuk-label govuk-checkboxes__label" for="premsector-3">
+                          Casino
+                        </label> </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="premsector-3" name="premsector" type="checkbox" value="casino">
+                            <label class="govuk-label govuk-checkboxes__label" for="premsector-3">
+                              etc......
+                            </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="Premstatus">
+                      Premises status
+                    </label>
+                    <select class="govuk-select" id="Premstatus" name="Premstatus">
+                      <option value="Premstatus1" selected>Any</option>
+                      <option value="Premstatus2">Application</option>
+                      <option value="Premstatus3">Granted</option>
+                      <option value="Premstatus4">Etc...</option>
+                    </select>
+                  </div>
+
+          <a href="/PremPRhome" role="button" draggable="false" class="govuk-button govuk-button--start">
+              Search
+            </a>
+      </div>
+    
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

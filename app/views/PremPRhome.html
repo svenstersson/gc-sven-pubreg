@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/index" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Find information about a gambling premises</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Welcome to the Premises Register</h2>
+        <p class="govuk-body-l">This service contains details of premises licensed by a local authority in Great Britain for the purposes of providing gambling services.
+          These include premises such as betting shops, bingo clubs, and casinos.</p>
+        <p class="govuk-body">This register is updated on a monthly basis. The information on the register is provided to the Commission by the relevant local authority.
+          If you would like the most up to date information regarding premises in a particular area, you should contact the relevant local authority directly.</p>
+        
+        <a href="/PremPRsearch" role="button" draggable="false" class="govuk-button govuk-button--start">
+          Continue to Premises Register
+        </a>
+      </div>
+
+<form method="post">
+
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Other registers</h3>
+        <p class="govuk-body">The Commission also maintains registers for Operating Licence holders, Personal Licence holders, and regulatory actions taken against licence holders.</p>
+        <button type="submit" class="govuk-button--secondary">
+          Return to Public Register home
+        </button>
+
+      </form>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

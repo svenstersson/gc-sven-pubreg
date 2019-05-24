@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="/index" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Find information about an individual</h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Welcome to the Personal Public Register</h2>
+        <p class="govuk-body-l">This service contains details of all individuals currently licensed by the Gambling Commission to hold a Personal Functional Licence or Personal Management Licence.</p>
+        <p class="govuk-body">Additionally, this services also includes details individuals who ceased to hold a licence within the last three years.</p>
+        <a href="/PLPRsearch" role="button" draggable="false" class="govuk-button govuk-button--start">
+          Continue to Personal Public Register
+        </a>
+      </div>
+
+<form method="post">
+
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Other registers</h3>
+        <p class="govuk-body">The Commission also maintains registers for Operating Licence holders, premises used to deliver gambling or gaming services, and regulatory action taken against licence holders.</p>
+        <button type="submit" class="govuk-button--secondary">
+          Return to Public Register home
+        </button>
+
+      </form>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}

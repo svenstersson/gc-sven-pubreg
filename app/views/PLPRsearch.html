@@ -1,0 +1,184 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a href="/index" class="govuk-back-link">Back to Our registers</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Personal Public Register</h1>
+        <p class="govuk-body">Enter search terms to find details of an individual or licence type.</p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="PL-name">
+            Name
+          </label>
+          <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with name
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                Enter an individual's full or partial name to search the register for that person.
+              </div>
+            </details>
+          <input class="govuk-input" id="PL-name" name="PL-name" type="text">
+        </div>
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="PL-number">
+              Individual's reference number
+            </label>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with individual's reference number
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  You can use this field to search an individual's full licence number, or their unique Gambling Commission account number.
+                </div>
+              </details>
+            <input class="govuk-input" id="PL-number" name="PL-number" type="text">
+          </div>
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <p class="govuk-body-l">
+                    Date of birth
+                    
+                </legend>
+                <span id="dob-hint" class="govuk-hint">
+                  For example, 27 01 1990
+                </span>
+              </p>
+                <div class="govuk-date-input" id="dob-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                    </div>
+                </div>
+              </div>
+              </fieldset>
+            </div>
+
+
+
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="pl-type-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                      <p class="govuk-body-l">
+                      Licence Type
+                    
+                  </legend>
+                  <span id="pl-type-hint" class="govuk-hint">
+                    <a href="/index">What are these?</a>
+                  </span>
+                </p>
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pl-type-1" name="pl-type" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="pl-type-1">
+                        Personal Functional Licence
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pl-type-2" name="pl-type" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="pl-type-2">
+                        Personal Management Licence
+                      </label> </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="RA-type-hint">
+                      <label class="govuk-label" for="RA-type">
+                          Regulatory action
+                        </label>
+                        <details class="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Help with regulatory action
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              Selecting yes will return matching results which have had regulatory action taken against them. Selecting no will only return matching results which have not had regulatory action taken against them. For more details on regulatory action, <a href ="/#">click here.</a>
+                            </div>
+                          </details>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="RA-type-1" name="RA-type" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="RA-type-1">
+                          Yes
+                        </label> </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="RA-type-2" name="RA-type" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="RA-type-2">
+                          No
+                        </label> </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="PLstatus">
+                      Licence status
+                    </label>
+                    <select class="govuk-select" id="PLstatus" name="PLstatus">
+                      <option value="PLstatus1" selected>Any</option>
+                      <option value="PLstatus2">Active</option>
+                      <option value="PLstatus3">Lapsed</option>
+                      <option value="PLstatus4">Surrendered</option>
+                      <option value="PLstatus5">Suspended</option>
+                      <option value="PLstatus6">Revoked</option>
+                      <option value="PLstatus7">Etc...</option>
+                    </select>
+                  </div>
+
+
+
+
+               
+
+          <a href="/PLPRhome" role="button" draggable="false" class="govuk-button govuk-button--start">
+              Search
+            </a>
+      </div>
+    
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
